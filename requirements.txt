@@ -1,3 +1,7 @@
+pip>=23.0
+setuptools>=67.0
+wheel>=0.40
+
 streamlit==1.37.1
 pandas==2.2.2
 numpy==1.26.4
@@ -6,5 +10,6 @@ sentence-transformers==2.2.2
 faiss-cpu==1.8.0
 scikit-learn==1.5.1
 langchain==0.2.11
-langchain-google-genai==0.0.12
+# Check if langchain-google-genai is publicly available or needed
+# langchain-google-genai==0.0.12  
 python-dotenv==1.0.1
