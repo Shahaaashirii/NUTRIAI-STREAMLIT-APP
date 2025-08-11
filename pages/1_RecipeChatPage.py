@@ -32,7 +32,8 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 bert_model = SentenceTransformer('all-MiniLM-L6-v2', device=device)
 
 # Google Gemini setup (replace with your API key)
-os.environ["GOOGLE_API_KEY"] = "AIzaSyC_v-ZTEt43cqMTLeooIKslr9xbEzFXZYw"
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+
 model = ChatGoogleGenerativeAI(model="gemini-2.5-pro")  # Correct Gemini model
 
 # =====================
