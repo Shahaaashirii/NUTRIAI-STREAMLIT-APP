@@ -2,14 +2,26 @@ pip>=23.0
 setuptools>=67.0
 wheel>=0.40
 
+# Core dependencies
 streamlit==1.37.1
 pandas==2.2.2
 numpy==1.26.4
 torch>=2.4.0
+
+# NLP / embeddings
 sentence-transformers==2.2.2
+# Use a prebuilt wheel to avoid CMake build errors
+sentencepiece>=0.2.0.post2
+
+# Vector search
 faiss-cpu==1.8.0
+
+# ML utils
 scikit-learn==1.5.1
+
+# LangChain
 langchain==0.2.11
-# Check if langchain-google-genai is publicly available or needed
-# langchain-google-genai==0.0.12  
+# langchain-google-genai==0.0.12  # Uncomment if you need it and it's public
+
+# Optional: for local environment variable loading (not used in Streamlit Cloud)
 python-dotenv==1.0.1
